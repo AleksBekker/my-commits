@@ -60,8 +60,3 @@ func remoteToLink(remoteLink string) (commitLink string) {
 
 	return
 }
-
-type strerr struct {
-	str string
-	err error
-}
