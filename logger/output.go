@@ -63,5 +63,5 @@ func (logger *Logger) println(levelName string, args ...any) (int, error) {
 
 	logger.mutex.Lock()
 	defer logger.mutex.Unlock()
-	return level.clrs.Fprintln(logger.writer, "%s%s", level.prefix, fmt.Sprintln(args...))
+	return level.clrs.Fprintln(logger.writer, fmt.Sprintf("%s%s", level.prefix, fmt.Sprintln(args...)))
 }

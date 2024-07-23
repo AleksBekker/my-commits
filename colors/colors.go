@@ -78,5 +78,5 @@ func (clrs *Colors) Println(args ...any) (n int, err error) {
 // endregion
 
 func (clrs *Colors) Errorf(format string, args ...any) error {
-	return errors.New(clrs.Sprintf(format, args))
+	return errors.New(clrs.Sprintf(format, args...))
 }
